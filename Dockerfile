@@ -1,4 +1,4 @@
-FROM agross/teamcity:2017.1-eap1
+FROM agross/teamcity:2017.1-eap2
 MAINTAINER Alexander Groß <agross@therightstuff.de>
 
 # Pass address of LDAPS server using TRUST_CERT environment variable,
