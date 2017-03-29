@@ -1,5 +1,5 @@
 FROM agross/teamcity
-MAINTAINER Alexander Groß <agross@therightstuff.de>
+LABEL maintainer "Alexander Groß <agross@therightstuff.de>"
 
 # Pass address of LDAPS server using TRUST_CERT environment variable,
 # e.g. "ldaps.example.com:636".
