@@ -4,6 +4,9 @@ LABEL maintainer "Alexander Groß <agross@therightstuff.de>"
 # Pass address of LDAPS server using TRUST_CERT environment variable,
 # e.g. "ldaps.example.com:636".
 ARG TRUST_CERT
+# Work around a bug in Synology's docker where ARG is not available as an environment variable.
+# Docker version 17.05.0-ce, build 34ed091-synology
+ENV TRUST_CERT $TRUST_CERT
 
 # Support HTTPS NuGet feeds with embedded https URLs.
 RUN sed --in-place --expression 's_.*tcpNoDelay="1".*$_&\
